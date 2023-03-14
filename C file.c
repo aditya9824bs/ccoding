@@ -167,7 +167,7 @@
 //        a = c;
 //    }
 //}
-
+//
 //Program 13
 //
 //int main(){
@@ -973,10 +973,178 @@
 //    fun();
 //    fun();
 //}
+//
+//int main() {
+//    int a = 10;
+//    int b = 40;
+//    int *p1 = &a;
+//    int *p2 = &b;
+//}
 
-int main() {
-    int a = 10;
-    int b = 40;
-    int *p1 = &a;
-    int *p2 = &b;
+//int main(){
+//    int x = 10,y = 3,z;
+//    for(z = 0;z<x;){
+//        z = z++ +y;
+//        printf("%d\n",z);
+//    }
+//}
+//
+//int main(){
+//    int size;
+//    scanf("%d",&size);
+//    int arr[size];
+//
+//    for(int i = 0;i<size;i++){
+//        scanf("%d",&arr[i]);
+//    }
+//    printf("%d\n",size/2);
+//    for(int j = 0 ;j<size/2;j++){
+//        arr[j] = arr[j] + arr[size-j-1];
+//        arr[size-j-1] = arr[j] - arr[size-j-1];
+//        arr[j] = arr[j] - arr[size-j-1];
+//    }
+//
+//    for(int k = 0;k<size;k++){
+//        printf("%d ",arr[k]);
+//    }
+//
+//}
+//int duplicate(int arr[] , int index,int val){
+//    for(int i = 0;i<5;i++){
+//        if (i ==index){
+//            continue;
+//        }
+//        if (arr[i] == val){
+//            return 1;
+//        }
+//    }
+//    return 0;
+//}
+//int main(){
+//    int count = 0;
+//    int arr[]={1,2,3,4,1};
+//    for(int i = 0;i<5;i++){
+//        if (duplicate(arr,i,arr[i])){
+//            printf("Yes");
+//            count++;
+//            break;
+//        }
+//    }
+//    if (!count){
+//        printf("N0");
+//    }
+//}
+
+//read from user ages of all the students atleast 12 in float array. Find min max and avg age
+//void max(float arr[]){
+//    float max = arr[0];
+//    int size = sizeof(arr)/sizeof(arr[0]);
+//    for(int i = 0;i<12;i++){
+//        if(arr[i]>max){
+//            max = arr[i];
+//        }
+//    }
+//    printf("Max is %f\n",max);
+//}
+//void min(float arr[]){
+//    float min = arr[0];
+//    for(int i = 0;i<12;i++){
+//        if(arr[i]<min){
+//            min = arr[i];
+//        }
+//    }
+//    printf("Min is %f\n",min);
+//}
+//void avg(float arr[]){
+//    float average = 0;
+//    int size = sizeof(arr)/sizeof(arr[0]);
+//    for(int i = 0;i<12;i++){
+//        average += arr[i];
+//    }
+//    printf("Average is %f\n",average/12);
+//}
+//int main(){
+//    float ages[] = {18.0,17.0,16.0,15.2,14.3,12.3,17.9,13.6,12.5,14.8,16.4,19.7};
+//    max(ages);
+//    min(ages);
+//    avg(ages);
+//}
+
+//Take number and shift all smaller number to left and larger to right
+//int main(){
+//    int arr[] = {11,2,1,6,5,7,8,3};
+//    int arr1[8];
+//    int num = 6;
+//    for(int i = 0;i<sizeof(arr)/sizeof(arr[0]);i++){
+//        if(arr[i]<num){
+//            printf("%d ",arr[i]);
+//        }
+//    }
+//    printf("%d ",num);
+//    for(int i = 0;i<sizeof(arr)/sizeof(arr[0]);i++){
+//        if(arr[i]>num){
+//            printf("%d ",arr[i]);
+//        }
+//    }
+//}
+
+//write a program to sort an array in increasing order
+//void sortArray(int arr[], int size){
+//    int temp;
+//    for(int i = 0;i<size;i++){
+//        for(int j = i+1;j<size;j++){
+//            if(arr[i]>arr[j]){
+//                temp = arr[i];
+//                arr[i] = arr[j];
+//                arr[j] = temp;
+//            }
+//        }
+//    }
+//    for(int i = 0;i<size;i++){
+//        printf("%d ",arr[i]);
+//    }
+//}
+//int main(){
+//    int num[6] = {2,1,4,6,3,5};
+//    sortArray(num,6);
+//}
+
+//second largest
+//
+//void secondLargest(int arr[],int size){
+//    int largest = arr[0];
+//    int second = arr[0];
+//    for(int i = 0;i<size;i++){
+//        if(arr[i]>largest){
+//            second = largest;
+//            largest = arr[i];
+//        }
+//        if (second<arr[i]&&arr[i]<largest){
+//            second = arr[i];
+//        }
+//    }
+//    printf("%d",second);
+//}
+//int main(){
+//    int num[] = {7,4,3,5,6,9,8,10};
+//    int size = 8;
+//    secondLargest(num,size);
+//}
+
+//copy arr
+
+void copy(int arr[],int size){
+    int copyArray[size];
+    for(int i = 0;i<size;i++){
+        copyArray[i] = arr[i];
+    }
+    for(int i = 0;i<size;i++){
+        printf("%d ",copyArray[i]);
+    }
+}
+
+int main(){
+    int arr[] = {1,2,3,4,5};
+    int size = 5;
+    copy(arr,size);
 }
