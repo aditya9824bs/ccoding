@@ -205,7 +205,7 @@
 //}
 
 //Program 15
-//
+//#include "math.h"
 //void armstrong(int num){
 //    float count=0;
 //    int armstrong = 0;
@@ -242,8 +242,8 @@
 //    printf("Prime");
 //}
 //int main(){
-//    //armstrong(153);
-//    //perfect(496);
+//    armstrong(153);
+//    perfect(496);
 //    prime(41);
 //
 //}
@@ -255,12 +255,14 @@
 //}
 //
 //int main(){
-//    area_Circum(1);
+//    float radius;
+//    scanf("%f",&radius);
+//    area_Circum(radius);
 //}
 
 //Program 17
 //void swapByValue(int x,int y){
-//    printf("\n%d %d",x,y);
+//    printf("%d %d",x,y);
 //    x = x +y;
 //    y = x-y;
 //    x = x-y;
@@ -268,9 +270,12 @@
 //}
 //void swapByReference(int *a,int* b){
 //    printf("\n%d %d",*a,*b);
-//    *a = *a + *b;
-//    *b = *a - *b;
-//    *a = *a - *b;
+////    *a = *a + *b;
+////    *b = *a - *b;
+////    *a = *a - *b;
+//    int *t = a;
+//    *a = *b;
+//    *b = *t;
 //    printf("\n%d %d",*a,*b);
 //
 //}
@@ -1133,18 +1138,39 @@
 
 //copy arr
 
-void copy(int arr[],int size){
-    int copyArray[size];
-    for(int i = 0;i<size;i++){
-        copyArray[i] = arr[i];
+//void copy(int arr[],int size){
+//    int copyArray[size];
+//    for(int i = 0;i<size;i++){
+//        copyArray[i] = arr[i];
+//    }
+//    for(int i = 0;i<size;i++){
+//        printf("%d ",copyArray[i]);
+//    }
+//}
+//
+//int main(){
+//    int arr[] = {1,2,3,4,5};
+//    int size = 5;
+//    copy(arr,size);
+//}
+
+//addition of even index using pointer
+
+void evenAdd(int *arr,int size){
+    int sum = 0;
+    for(int i = 0;i<size;i+=2){
+        sum += *(arr+i);
     }
-    for(int i = 0;i<size;i++){
-        printf("%d ",copyArray[i]);
-    }
+    printf("%d",sum);
 }
 
 int main(){
-    int arr[] = {1,2,3,4,5};
-    int size = 5;
-    copy(arr,size);
+    int size;
+    scanf("%d",&size);
+    int arr[size];
+    for(int i = 0;i<size;i++){
+        scanf("%d",&arr[i]);
+    }
+    evenAdd(arr,size);
 }
+//hello
